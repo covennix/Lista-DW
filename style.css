@@ -1,133 +1,181 @@
-:root {
-    --gray-700: #0D0D0D;
-    --gray-600: #1A1A1A;
-    --blue-dark: #1E6F9F;
-    --gray-100: #F2F2F2;
-    --gray-500: #262626;
-    --blue: #4EA8DE;
-    --gray-300: #808080;
-    --gray-400: #333333;
-    --gray-200: #D9D9D9;
-    --purple: #8284FA;
-}
-
 * {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--gray-600);
-    color: var(--gray-100);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #1A1A1A;
+    font-family: 'Inter', sans-serif;
 }
 
 #container {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 800px;
 }
 
 header {
+    width: 100vw;
+    height: 200px;
+    background-color: #0D0D0D;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--gray-700);
-    width: 100%;
-    padding: 20px;
 }
 
 header img {
     width: 126px;
     height: 48px;
+    margin-top: 88px;
 }
+
+main {
+    width: 736px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#espacoTarefas {
+    width: 735px;
+    border-radius: 8px;
+    margin-top: 30px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgPrancheta {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+#pSemTarefa,
+#pCriaTarefa {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #000000;
+    font-size: 20px;
+    line-height: 0.9;
+}
+
+
+#pCriaTarefa {
+    margin-top: 2px;
+}
+
 
 .input-container {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
 }
 
-input[type="text"] {
-    width: 400px;
-    padding: 10px;
-    background-color: var(--gray-500);
-    border: 2px solid var(--gray-700);
-    border-radius: 5px;
-    color: var(--gray-100);
-    font-size: 16px;
-}
-
-button {
-    display: flex;
-    align-items: center;
-    background-color: var(--blue-dark);
-    color: var(--gray-100);
-    padding: 10px 20px;
+.input-container input {
+    width: 638px;
+    height: 54px;
+    border-radius: 8px;
+    background-color: #262626;
     border: none;
-    border-radius: 5px;
+    color: #808080;
+    padding: 16px;
     font-size: 16px;
-    cursor: pointer;
-    margin-left: 10px;
 }
 
-button svg {
-    margin-left: 5px;
+.input-container button {
+    width: 90px;
+    height: 54px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color: #1E6F9F;
+    font-size: 14px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
 }
 
 #task-info {
+    width: 100%;
+    margin-top: 60px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 800px;
+    color: #4EA8DE;
 }
 
 #task-info h3 {
-    color: var(--blue);
+    display: flex;
+    align-items: center;
 }
 
 #task-info span {
-    background-color: var(--gray-500);
+    background-color: #333333;
+    color: white;
+    padding: 2px 8px;
     border-radius: 999px;
-    padding: 5px 10px;
-    color: var(--gray-200);
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+#created-tasks {
+    color: #4EA8DE;
+}
+
+#completed-tasks {
+    color: #8284FA;
 }
 
 .tasks {
     width: 100%;
-    max-width: 800px;
-    background-color: var(--gray-600);
-    padding: 20px;
-    border-radius: 10px;
+    margin-top: 30px;
 }
 
-.tasks ul {
+#task-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.tasks li {
+#task-list li {
+    width: 100%;
+    height: 72px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    background-color: #262626;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 16px;
+    justify-content: space-between;
 }
 
-.tasks li input[type="checkbox"] {
-    margin-right: 10px;
+#task-list li input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
 }
 
-.tasks li span {
-    flex: 1;
+#task-list li span {
+    color: #F2F2F2;
+    margin-left: 16px;
+    flex-grow: 1;
 }
 
-.tasks li input[type="checkbox"]:checked + span {
-    text-decoration: line-through;
-    color: var(--gray-300);
-}
+
+
